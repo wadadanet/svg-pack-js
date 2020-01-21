@@ -8,15 +8,26 @@ Convert SVG files to one JS file
 
 ## Quick start
 
+### 1. install
+
 ```bash
 npm install svg-pack --save-dev
 ```
 
-## Example
+### 2. Make svg-pack.js
+``` js
+const svgPack = require('svg-pack');
+svgPack({
+    svg_path: 'src/assets/svg/*.svg',
+    output_path: 'src/svg-pack.js',
+})
+```
+
+### 3. Use
 
 ``` html
 <head>
-  <script src="./svg_pack.js" async>
+  <script src="./svg-pack.js" async>
 </head>
 <body>
   <div class="svgp svgp-home"></div>
@@ -37,13 +48,6 @@ npm install svg-pack --save-dev
   fill: #FF0000;
 }
 ```
-
-## Install
-```bash
-npm install --save-dev svg-pack
-```
-
-## Config
 
 ## License
 

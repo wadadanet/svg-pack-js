@@ -8,19 +8,19 @@ const { writeFile } = require('fs')
 const { resolve } = require('path')
 
 module.exports = async ({
-        svgfile_path,
-        template_js_path,
+        svg_path,
         output_path,
+        template_js_path,
         babel_option = { minified: true }
     }) => {
     if(!template_js_path) {
         template_js_path = resolve(__dirname + '/front-end/svg-pack.js')
     }
     const files = await loadFiles({
-        pattern: svgfile_path
+        pattern: svg_path
     })
     if (!files || files.length === 0) {
-        console.log("svgfile_path", svgfile_path);
+        console.log("svg_path", svg_path);
         throw new Error('svg file not found')
     }
     let datas = {};
