@@ -14,12 +14,13 @@ module.exports = async ({
         babel_option = { minified: true }
     }) => {
     if(!template_js_path) {
-        template_js_path = resolve(__dirname + '/front-end/succsess-svg-pack.js')
+        template_js_path = resolve(__dirname + '/front-end/svg-pack.js')
     }
     const files = await loadFiles({
         pattern: svgfile_path
     })
     if (!files || files.length === 0) {
+        console.log("svgfile_path", svgfile_path);
         throw new Error('svg file not found')
     }
     let datas = {};
@@ -38,7 +39,7 @@ module.exports = async ({
 
     await promisify(writeFile)(output_path, js_code)
         .catch (error => {
-            throw new Error('file not found')
+            throw new Error('write error')
         });
 
     return
