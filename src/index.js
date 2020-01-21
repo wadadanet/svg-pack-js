@@ -5,6 +5,7 @@ const creatJs = require('./lib/creat-js')
 const { basename } = require('path')
 const { promisify } = require('util');
 const { writeFile } = require('fs')
+const { resolve } = require('path')
 
 module.exports = async ({
         svgfile_path,
@@ -12,6 +13,9 @@ module.exports = async ({
         output_path,
         babel_option = { minified: true }
     }) => {
+    if(!template_js_path) {
+        template_js_path = resolve(__dirname + '/front-end/succsess-svg-pack.js')
+    }
     const files = await loadFiles({
         pattern: svgfile_path
     })
