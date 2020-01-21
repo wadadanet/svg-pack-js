@@ -1,6 +1,6 @@
 const SvgPack = require('../src/index')
 const { resolve } = require('path')
-const { readFile, unlink } = require('fs')
+const { readFile, unlinkSync } = require('fs')
 const { promisify } = require('util');
 
 
@@ -16,7 +16,7 @@ describe('svg-pack', () => {
         const js_code = await promisify(readFile)(output_path, 'utf-8')
         const expect_value = await promisify(readFile)(resolve(__dirname + '/data/front-end/svgpack.js'), 'utf-8')
         expect(js_code).toBe(expect_value)
-        unlink(output_path)
+        unlinkSync(output_path)
         return
     })
     it("svg file not found", async ()=>{
