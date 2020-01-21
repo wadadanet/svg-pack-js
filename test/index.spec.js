@@ -8,7 +8,7 @@ describe('svg-pack', () => {
     it('file converts', async () => {
         const output_path = resolve(__dirname + '/tmp/svg-pack.js')
         await SvgPack({
-            svgfile_path: resolve(__dirname + '/svg/*.svg'),
+            svg_path: resolve(__dirname + '/svg/*.svg'),
             template_js_path: resolve(__dirname + '/data/front-end/succsess-svg-pack.js'),
             output_path 
         })
@@ -23,7 +23,7 @@ describe('svg-pack', () => {
         const output_path = resolve(__dirname + '/tmp/svg-pack.js')
         let has_error = false
         await SvgPack({
-            svgfile_path: resolve(__dirname + '/no_svg/*.svg'),
+            svg_path: resolve(__dirname + '/no_svg/*.svg'),
             template_js_path: resolve(__dirname + '/data/front-end/succsess-svg-pack.js'),
             output_path
             })
