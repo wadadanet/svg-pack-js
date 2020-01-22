@@ -4,7 +4,7 @@ Convert SVG files to one JS file
 
 ## Example
 
-- [Font Awesome(free) SVG Pack](https://github.com/wadadanet/svg-pack/tree/master/example/index.html)
+- [Font Awesome(free) SVG Pack](https://github.com/wadadanet/svg-pack/tree/master/example/fontawesome)
 
 ## Quick start
 
