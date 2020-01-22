@@ -8,7 +8,8 @@
     "test:index": "jest ./test/index",
     "test:load-files": "jest ./test/lib/load-files",
     "test:convert_svg_to_js": "jest ./test/lib/convert-svg-to-js",
-    "test:creat-js": "jest ./test/lib/creat-js"
+    "test:creat-js": "jest ./test/lib/creat-js",
+    "example:fontawesome": "node ./example/scripts/make-fontawesome"
   },
   "author": "wada <wada@coffee-break-designs.com>(https://www.coffee-break-designs.com/)",
   "license": "MIT",

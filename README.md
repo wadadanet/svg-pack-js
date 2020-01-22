@@ -2,9 +2,9 @@
 
 Convert SVG files to one JS file
 
-## Why?
+## Example
 
-一つのJSファイルで複数のSVGファイルをロードできたら最高だから
+- [Font Awesome(free) SVG Pack](https://github.com/wadadanet/svg-pack/tree/master/example/index.html)
 
 ## Quick start
 
