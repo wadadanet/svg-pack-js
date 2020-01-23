@@ -1,22 +1,22 @@
-## SVG-Pack
+## SVG Pack JS
 
 Convert SVG files to one JS file
 
 ## Example
 
-- [Font Awesome(free) SVG Pack](https://github.com/wadadanet/svg-pack/tree/master/example/fontawesome)
+- [Font Awesome(free) SVG Pack JS](https://github.com/wadadanet/svg-pack/tree/master/example/fontawesome)
 
 ## Quick start
 
 ### 1. install
 
 ```bash
-npm install svg-pack --save-dev
+npm install svg-pack-js --save-dev
 ```
 
 ### 2. Make svg-pack.js
 ``` js
-const svgPack = require('svg-pack');
+const svgPack = require('svg-pack-js');
 svgPack({
     svg_path: 'src/assets/svg/*.svg',
     output_path: 'src/svg-pack.js',

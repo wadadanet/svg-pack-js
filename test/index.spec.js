@@ -4,7 +4,7 @@ const { readFile, unlinkSync } = require('fs')
 const { promisify } = require('util');
 
 
-describe('svg-pack', () => {
+describe('svg-pack-js', () => {
     it('file converts', async () => {
         const output_path = resolve(__dirname + '/tmp/svg-pack.js')
         await SvgPack({

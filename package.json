@@ -1,5 +1,5 @@
 {
-  "name": "svg-pack",
+  "name": "svg-pack-js",
   "version": "0.1.1",
   "description": "SVG files to be used can be combined in JS",
   "main": "index.js",

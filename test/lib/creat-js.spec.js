@@ -1,7 +1,7 @@
 const creatJs = require('../../src/lib/creat-js')
 const path = require('path')
 
-describe('svg-pack', ()=>{
+describe('svg-pack-js', ()=>{
     it('creat js code', async () =>{
         const js_code = await creatJs(
             path.resolve(__dirname + '/../data/front-end/succsess-svg-pack.js'),
