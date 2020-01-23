@@ -15,12 +15,18 @@ npm install svg-pack-js --save-dev
 ```
 
 ### 2. Make svg-pack.js
+
 ``` js
+// make-svg-pack.js
 const svgPack = require('svg-pack-js');
 svgPack({
     svg_path: 'src/assets/svg/*.svg',
     output_path: 'src/svg-pack.js',
 })
+```
+
+```bash
+node make-svg-pack.js
 ```
 
 ### 3. Use

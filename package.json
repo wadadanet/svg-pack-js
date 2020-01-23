@@ -1,6 +1,6 @@
 {
   "name": "svg-pack-js",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "SVG files to be used can be combined in JS",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,10 @@
     "test:convert_svg_to_js": "jest ./test/lib/convert-svg-to-js",
     "test:creat-js": "jest ./test/lib/creat-js",
     "example:fontawesome": "node ./example/scripts/make-fontawesome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wadadanet/svg-pack-js"
   },
   "author": "wada <wada@coffee-break-designs.com>(https://www.coffee-break-designs.com/)",
   "license": "MIT",
