@@ -2,8 +2,6 @@
 
 Convert SVG files to one JS file
 
-There was a design error where SVG was not displayed when redrawing an element. Please do not use!
-
 ## Example
 
 - [Font Awesome(free) SVG Pack JS](https://github.com/wadadanet/svg-pack/tree/master/example/fontawesome)
@@ -55,6 +53,23 @@ node make-svg-pack.js
 - Reduce requests
 
 ## Features
+- Mutation Observer
+- Change Color
+
+### MutationObserver
+
+Create svg-pack-js that responds to all element changes
+
+```bash
+npx svg-pack-js -s src/assets/svg/*.svg -o src/svg-pack.js -m
+```
+
+or Set manually
+
+```bash
+window.SvgPack.mutationObserverStart(target)
+```
+
 
 ### Change Color
 

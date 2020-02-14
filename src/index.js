@@ -12,10 +12,10 @@ module.exports = async ({
         svg_path,
         output_path,
         template_js_path = resolve(__dirname + '/front-end/svg-pack.js'),
-        babel_option = { minified: true }
+        babel_option = { minified: true },
+        mutation_observer = false
     }) => {
     console.info(`svg-pack-js varsion:${version}`)
-    console.info(`svg path:${svg_path}`)
     
     const files = await loadFiles({
         pattern: svg_path
@@ -35,13 +35,15 @@ module.exports = async ({
     const js_code = await creatJs(
         template_js_path,
         svgs_str,
-        babel_option
+        babel_option,
+        mutation_observer
     )
 
     await promisify(writeFile)(output_path, js_code)
         .catch (error => {
             throw new Error('write error')
         });
-    
+
+    console.info(`SUCCESS!! ${svg_path} ===> ${output_path}`)
     return true
 };
