@@ -17,7 +17,6 @@ describe('svg-pack-js', () => {
         const expect_value = await promisify(readFile)(resolve(__dirname + '/data/front-end/svgpack.js'), 'utf-8')
         expect(js_code).toBe(expect_value)
         unlinkSync(output_path)
-        return
     })
     it("svg file not found", async ()=>{
         const output_path = resolve(__dirname + '/tmp/svg-pack.js')

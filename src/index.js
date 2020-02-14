@@ -3,9 +3,11 @@ const loadFiles = require('./lib/load-files')
 const convertSvgToJs = require('./lib/convert-svg-to-js')
 const creatJs = require('./lib/creat-js')
 const { basename } = require('path')
-const { promisify } = require('util');
+const { promisify } = require('util')
 const { writeFile } = require('fs')
 const { resolve } = require('path')
+const program = require("commander")
+const { version } = require("../package.json")
 
 module.exports = async ({
         svg_path,
@@ -13,6 +15,20 @@ module.exports = async ({
         template_js_path,
         babel_option = { minified: true }
     }) => {
+    console.log(`svg-pack-js varsion:${version}`)
+    console.log(process.argv)
+    program
+        .version(version)
+        .option('-s, --svg', 'Add peppers')
+        .option('-o, --output', 'Add pineapple')
+        .parse(process.argv);
+    if (program.svg) {
+        svg_path = program.svg
+    }
+    if (program.output) {
+        output_path = program.output
+    }
+
     if(!template_js_path) {
         template_js_path = resolve(__dirname + '/front-end/svg-pack.js')
     }

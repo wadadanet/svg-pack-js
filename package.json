@@ -1,6 +1,6 @@
 {
   "name": "svg-pack-js",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "SVG files to be used can be combined in JS",
   "main": "index.js",
   "scripts": {
@@ -30,6 +30,8 @@
     "util": "^0.12.1"
   },
   "devDependencies": {
+    "commander": "^4.1.1",
     "jest": "^24.9.0"
-  }
+  },
+  "bin": "./index.js"
 }
