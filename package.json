@@ -2,7 +2,6 @@
   "name": "svg-pack-js",
   "version": "0.1.5",
   "description": "SVG files to be used can be combined in JS",
-  "main": "index.js",
   "scripts": {
     "test": "jest ./test/*",
     "test:index": "jest ./test/index",
@@ -33,5 +32,5 @@
     "commander": "^4.1.1",
     "jest": "^24.9.0"
   },
-  "bin": "./index.js"
+  "bin": "./bin/index.js"
 }

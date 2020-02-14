@@ -6,32 +6,17 @@ const { basename } = require('path')
 const { promisify } = require('util')
 const { writeFile } = require('fs')
 const { resolve } = require('path')
-const program = require("commander")
 const { version } = require("../package.json")
 
 module.exports = async ({
         svg_path,
         output_path,
-        template_js_path,
+        template_js_path = resolve(__dirname + '/front-end/svg-pack.js'),
         babel_option = { minified: true }
     }) => {
-    console.log(`svg-pack-js varsion:${version}`)
-    console.log(process.argv)
-    program
-        .version(version)
-        .option('-s, --svg', 'Add peppers')
-        .option('-o, --output', 'Add pineapple')
-        .parse(process.argv);
-    if (program.svg) {
-        svg_path = program.svg
-    }
-    if (program.output) {
-        output_path = program.output
-    }
-
-    if(!template_js_path) {
-        template_js_path = resolve(__dirname + '/front-end/svg-pack.js')
-    }
+    console.info(`svg-pack-js varsion:${version}`)
+    console.info(`svg path:${svg_path}`)
+    
     const files = await loadFiles({
         pattern: svg_path
     })
@@ -57,6 +42,6 @@ module.exports = async ({
         .catch (error => {
             throw new Error('write error')
         });
-
-    return
-}
+    
+    return true
+};
